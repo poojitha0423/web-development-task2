@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Web Dev Profile Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header>
+    <div class="header-content">
+        <h1>🚀 Web Developer Dashboard</h1>
+        <p>Showcase • Contact • Productivity</p>
+    </div>
+</header>
+
+<!-- Main Container -->
+<div class="container">
+    <!-- Profile Section -->
+    <div class="profile-card">
+        <div class="profile-img-wrapper">
+        <img id="profilePic" src="https://via.placeholder.com/150" alt="Profile Picture"/>
+        <label class="upload-btn">
+            📷  uploadPic
+            <input type="file" id="uploadPic" accept="image/*" />
+        </label>
+    </div>
+    <input type="text" id="username" placeholder="Your Name" />
+    </div>
+
+    <!-- Grid Layout: Contact Form and To-Do -->
+    <div class="grid-section">
+        <!-- Contact Form -->
+        <section class="card form-section">
+        <h2>📬 Contact Me</h2>
+        <form id="contactForm">
+            <label>Name:<input type="text" id="name" required /></label>
+            <label>Email:<input type="email" id="email" required /></label>
+            <label>Message:<textarea id="password" required></textarea></label>
+            <button type="submit">Send Message</button>
+            <p class="form-error" id="formError"></p>
+        </form>
+        </section>
+
+        <!-- To-Do List -->
+        <section class="card todo-section">
+        <h2>📝 To-Do List</h2>
+        <div class="todo-input">
+            <input type="text" id="todoInput" placeholder="Add new task" />
+            <button onclick="addTodo()">Add</button>
+            <button onclick="deleteTodo()">delete</button>
+        </div>
+        <ul id="todoList"></ul>
+        </section>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
